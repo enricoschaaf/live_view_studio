@@ -1,9 +1,9 @@
 defmodule LiveViewStudio.Licenses do
+  def calculate(seats) when seats < 6 do
+    seats * 20
+  end
+
   def calculate(seats) do
-    if seats <= 5 do
-      seats * 20.0
-    else
-      100 + (seats - 5) * 15.0
-    end
+    100 + (seats - 5) * 15
   end
 end
